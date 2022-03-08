@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Category index</h1>
 
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
-            <tr>
+            <tr class="table-custom-styles">
                 <th>Id</th>
                 <th>Name</th>
                 <th>actions</th>
@@ -15,21 +15,21 @@
         </thead>
         <tbody>
         {% for category in categories %}
-            <tr>
+            <tr class="table-custom-styles">
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+                    <a href="{{ path('category_show', {'id': category.id}) }}" class="btn btn-success">show</a>
+                    <a href="{{ path('category_edit', {'id': category.id}) }}" class="btn btn-success">edit</a>
                 </td>
             </tr>
         {% else %}
-            <tr>
+            <tr class="table-custom-styles">
                 <td colspan="3">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('category_new') }}">Create new</a>
+    <a href="{{ path('category_new') }}" class="btn btn-success btn-create">Create new</a>
 {% endblock %}

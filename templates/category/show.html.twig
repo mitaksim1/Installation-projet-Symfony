@@ -18,9 +18,11 @@
         </tbody>
     </table>
 
-    <a href="{{ path('category_index') }}">back to list</a>
-
-    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+    <div class="btn-styles">
+        <a href="{{ path('category_edit', {'id': category.id}) }}" class="btn btn-success btn-style">edit</a>
+    </div>
 
     {{ include('category/_delete_form.html.twig') }}
+    
+    <a href="{{ path('category_index') }}">back to list</a>
 {% endblock %}
