@@ -1,0 +1,28 @@
+// Souscrit la valeur par défaut de Bootstrap
+$navbar-light-color: #212529;
+
+/* Navbar */
+.navbar-nav {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+/* Change la position des liens  vers la droite */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+
+/* Remet les liens vers la gauche */
+@media only screen and (min-width: 576px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: flex-start;
+        text-align: start;
+    }
+}
