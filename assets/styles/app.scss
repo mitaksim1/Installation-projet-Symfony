@@ -16,6 +16,18 @@ a {
     color: green;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button.btn-style,
+.btn-styles .btn-style {
+    width: 9.375rem;
+    align-self: center;
+    margin-top: .5rem;
+}
+
 
 /* Page plat index */
 
@@ -25,14 +37,15 @@ a {
     height: 3.125rem;
 }
 
-.btn-style {
-    margin-bottom: .5rem;
-}
-
 .btn-create {
     display: block;
     margin: 0 auto;
     width: 25vw;
+}
+
+/* Boutons edit et show */
+.btn-container .btn-style {
+    margin-bottom: .5rem;
 }
 
 @media only screen and (min-width: 576px) {

@@ -32,10 +32,10 @@
 
     
     <div class="btn-styles">
-        <a href="{{ path('plat_edit', {'id': plat.id}) }}" class="btn btn-success btn-style">edit</a>
-        
-        {{ include('plat/_delete_form.html.twig') }}
+        <a href="{{ path('plat_edit', {'id': plat.id}) }}" class="btn btn-success btn-style">edit</a>  
     </div>
+    
+    {{ include('plat/_delete_form.html.twig') }}
     
     <a href="{{ path('plat_index') }}">back to list</a>
 {% endblock %}
