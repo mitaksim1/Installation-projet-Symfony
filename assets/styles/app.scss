@@ -1,0 +1,39 @@
+@import '~bootstrap';
+
+// body {
+//     background-color: lightgray;
+// }
+
+/* Logo */
+.icon-image {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+h1 {
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Page plat index */
+.btn-style {
+    margin-bottom: .5rem;
+}
+
+.btn-create {
+    display: block;
+    margin: 0 auto;
+    width: 25vw;
+}
+
+@media only screen and (min-width: 576px) {
+    .btn-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+    }
+
+    .btn-create {
+        max-width: 9.375rem;
+    }
+}

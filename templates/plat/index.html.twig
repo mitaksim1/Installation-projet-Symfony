@@ -4,20 +4,19 @@
 
 {% block body %}
     <h1>Plat index</h1>
-
-    <table class="table">
+    <table class="table table-bordered table-sm align-middle table-custom-styles">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Categorie</th>
-                <th>Description</th>
-                <th>actions</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Categorie</th>
+                <th scope="col">Description</th>
+                <th scope="col">actions</th>
             </tr>
         </thead>
         <tbody>
         {% for plat in plats %}
-            <tr>
+            <tr scope="row">
                 <td>{{ plat.id }}</td>
                 <td>{{ plat.nom }}</td>
                 <td>
@@ -26,18 +25,18 @@
                     {% endif %}
                 </td>
                 <td>{{ plat.description }}</td>
-                <td>
-                    <a href="{{ path('plat_show', {'id': plat.id}) }}">show</a>
-                    <a href="{{ path('plat_edit', {'id': plat.id}) }}">edit</a>
+                <td class="btn-container">
+                    <a href="{{ path('plat_show', {'id': plat.id}) }}" class="btn btn-success btn-style">show</a>
+                    <a href="{{ path('plat_edit', {'id': plat.id}) }}" class="btn btn-success btn-style">edit</a>
                 </td>
             </tr>
         {% else %}
-            <tr>
+            <tr scope="row">
                 <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('plat_new') }}">Create new</a>
+    <a href="{{ path('plat_new') }}" class="btn btn-success btn-create">Create new</a>
+    
 {% endblock %}
