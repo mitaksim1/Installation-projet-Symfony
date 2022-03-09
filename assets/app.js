@@ -15,6 +15,4 @@ import 'bootstrap';
 // start the Stimulus application
 import './bootstrap';
 
-import form from './form';
 
-document.addEventListener('DOMContentLoad', form());
