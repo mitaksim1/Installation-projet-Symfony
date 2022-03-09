@@ -5,6 +5,13 @@
 {% block body %}
     <h1>Plat index</h1>
 
+    {# Ajoute un message en cas de succès #}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <table class="table table-bordered table-sm align-middle table-custom-styles">
         <thead>
             <tr>

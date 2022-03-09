@@ -33,6 +33,9 @@ class PlatController extends AbstractController
             $entityManager->persist($plat);
             $entityManager->flush();
 
+            // Ajoute un message pour confirmer la création de la donnée
+            $this->addFlash('success', 'Le plat ' . $plat->getNom() . ' a bien été crée');
+
             return $this->redirectToRoute('plat_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -59,6 +62,9 @@ class PlatController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
+            // Ajoute un message pour confirmer la modification de la donnée
+            $this->addFlash('success', 'Le plat ' . $plat->getNom() . ' a bien été modifié');
+
             return $this->redirectToRoute('plat_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -75,6 +81,9 @@ class PlatController extends AbstractController
             $entityManager->remove($plat);
             $entityManager->flush();
         }
+
+        // Ajoute un message pour confirmer la suppression de la donnée
+        $this->addFlash('success', 'Le plat ' . $plat->getNom() . ' a bien été supprimé');
 
         return $this->redirectToRoute('plat_index', [], Response::HTTP_SEE_OTHER);
     }
